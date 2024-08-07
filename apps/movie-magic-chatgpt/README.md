@@ -26,9 +26,11 @@ the image in 2/3 aspect ratio.
   compile the generated code. It is a good start, but there are minor issues all
   over the place. The developer must step in to iron out all the issues before
   you can see a working app.
-- **Does not understand Next.js and React Server Components**: Components that
-  used hooks and event handlers were created as server components (no
-  `'use client'`).
+- **Application setup instructions were haphazard**: ChatGPT blindly copied
+  setup instructions from Next.js, Tailwind CSS and shadcn/ui without
+  integrating them into a meaningful flow. I discarded them completely and used
+  [Code Shaper](https://www.code-shaper.dev/docs/getting-started/create-a-new-repo)
+  to generate my starter app.
 - **shadcn/ui not used at all**: It was very clear that ChatGPT did not
   understand what shadcn/ui is. It simply reiterated the guidance I gave it. For
   example, "Install components: npx shadcn-ui@latest add button", however it did
@@ -36,6 +38,10 @@ the image in 2/3 aspect ratio.
 - **Light/Dark mode not implemented**: ChatGPT simply pointed to the references
   I gave it, and did not actually implement light/dark mode. The header only had
   a placeholder button for it.
+- **User avatar & dropdown menu not implemented**: This is a complete miss!
+- **Does not understand Next.js and React Server Components**: Components that
+  used hooks and event handlers were created as server components (no
+  `'use client'`).
 
 ## Nit Picks
 

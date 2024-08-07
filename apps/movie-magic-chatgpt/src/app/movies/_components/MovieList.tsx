@@ -3,7 +3,7 @@ import React from 'react';
 
 function MovieList() {
   return (
-    <div className="movie-list">
+    <div className="container relative flex w-full max-w-screen-lg flex-1 flex-col overflow-auto px-4 py-2 sm:px-8">
       {/* Header Row */}
       <div className="movie-list-header grid h-10 grid-cols-7 gap-4 px-4">
         <div>#</div>
@@ -16,7 +16,7 @@ function MovieList() {
       </div>
 
       {/* Movie Entries */}
-      <div className="movie-list-entries">
+      <div className="movie-list-entries flex-1">
         {movies.map((movie) => (
           <div
             className="movie-entry grid h-[112px] grid-cols-7 gap-4 border-b p-2 px-4"

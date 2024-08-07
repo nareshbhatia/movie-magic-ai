@@ -2,7 +2,7 @@ import React from 'react';
 
 function Toolbar() {
   return (
-    <div className="flex h-14 items-center justify-between px-4">
+    <div className="container flex h-14 max-w-screen-lg items-center justify-between px-4 sm:px-8">
       <button className="button rounded-md bg-blue-500 px-3 py-2 text-white">
         Filter & Sort
       </button>
