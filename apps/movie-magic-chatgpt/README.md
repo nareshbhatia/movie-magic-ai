@@ -100,6 +100,28 @@ resulting screen:
 
 ![Iteration 3](assets/iteration-3.png)
 
+### Iteration 4 - Improve Toolbar
+
+The final task was to improve the Toolbar. Similar to iteration 3, I supplied
+ChatGPT with a screenshot of the Toolbar from my manual implementation (see
+below) along with the specifications of the shadcn/ui components that I wanted
+to use.
+
+![Toolbar Spec](assets/toolbar-spec.png)
+
+ChatGPT did what I asked it to do, but it was obvious that it was following
+instructions without actually understanding them. For example, it thought that
+shadcn/ui is a library and it created an import like this:
+`import { Button } from 'shadcn/ui'`. Again, I tweaked the generated code a bit
+to make it work. Here's the resulting screen:
+
+![Iteration 4](assets/iteration-4.png)
+
+This is very close to my manual implementation. Of course, it gets us only the
+visual look. The functionality is still missing, e.g. the data is not fetched
+from a server, and the filters don't work. Anyway, I stopped here with ChatGPT
+because I have a pretty good idea about what it can do.
+
 ## Summary of Major Issues
 
 - **Cumbersome workflow**: The fact that ChatGPT runs outside my IDE makes it a
