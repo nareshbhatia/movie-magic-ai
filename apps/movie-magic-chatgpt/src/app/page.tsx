@@ -1,11 +1,8 @@
 export default function HomePage() {
   return (
-    <div className="container relative mx-auto max-w-screen-xl px-8 py-4">
-      This app is bootstrapped with{' '}
-      <a className="text-blue-600" href="https://code-shaper.dev">
-        Code Shaper
-      </a>
-      .
+    <div className="flex h-screen flex-col items-center justify-center">
+      <h1 className="text-2xl font-bold">Welcome to Movie Magic</h1>
+      <p>Explore our movie collection or check your watchlist!</p>
     </div>
   );
 }
