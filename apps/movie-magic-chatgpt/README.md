@@ -57,28 +57,48 @@ makes no attempt to actually compile the code it generates – there are minor
 issues all over the place. The developer must step in to create a working app.
 That's exactly what I did in iteration 1.
 
-### Iteration 1
+### Iteration 1 - Clean up generated code
 
-Here's the result after ironing out all the compilation issues. Note that the
-visual design is really off. In spite of specific instructions, ChatGPT did not
-use any shadcn/ui components to give a polished look to the UI. Light/dark mode
-were not implemented. Movies entries didn't include the provided images. I had
-to literally give it the code to render the image in 2/3 aspect ratio.
+Here's the result after ironing out all the compilation issues in the generated
+code. Notice that the visual design is really off. In spite of specific
+instructions, ChatGPT did not use any shadcn/ui components to give a polished
+look to the UI. Light/dark mode were not implemented. Movies entries didn't
+include the provided images. I had to literally give it the code to render the
+image in 2/3 aspect ratio.
 
 ![Iteration 1](assets/iteration-1.png)
 
-### Iteration 2
+### Iteration 2 - Add shadcn/ui
 
-Given that ChatGPT did not understand shadcn/ui, and the visual design is way
-off, I made a bunch of manual changes to make the app look half-way decent:
+Given that ChatGPT did not understand shadcn/ui, and the visual design was way
+off, I made a bunch of manual changes to make the app look half-way decent (see
+[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/e6eb6579f4cc36d6cc4094f0fa5317d74c289e38)
+to get a sense of the effort involved):
 
 1. Added shadcn/ui
 2. Added light/dark mode
 3. Brought in the right logo from Lucide icons
 4. Cleaned up the header layout
-5. Added some basic responsive behavior
+5. Added basic responsive behavior
 
 ![Iteration 2](assets/iteration-2.png)
+
+### Iteration 3 - Improve Movie List
+
+The next task was to improve the layout of the Movie List. I wanted to see if
+ChatGPT would do better by looking at an actual visual design compared to the
+wireframe that I had supplied earlier. I gave it a screenshot of the Movie List
+from my manual implementation (see below) along with precise column widths, text
+justifications and the desired responsive behavior.
+
+![Movie List Spec](assets/movie-list-spec.png)
+
+ChatGPT did a pretty good job with this. It used grid layout to create precise
+column widths. It also implemented the responsive specs, but messed up a little.
+I had to tweak the generated code to get the desired results. Here's the
+resulting screen:
+
+![Iteration 3](assets/iteration-3.png)
 
 ## Summary of Major Issues
 
