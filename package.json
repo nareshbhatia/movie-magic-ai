@@ -1,6 +1,6 @@
 {
   "name": "movie-magic-ai",
-  "description": "Movie Magic Ai",
+  "description": "Movie Magic implementations using various AI assistants",
   "version": "0.0.1",
   "private": true,
   "repository": {

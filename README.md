@@ -1,8 +1,6 @@
-# Movie Magic Ai
+# Movie Magic AI
 
-** Add a short description of Movie Magic Ai here. **
-
-This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
+Movie Magic implementations using various AI assistants.
 
 ## Prerequisites for development
 
@@ -16,15 +14,11 @@ nvm use        # use the required version of node
 npm ci         # install dependencies
 npm run build  # build all packages
 npm run dev    # run apps
-
-# in a separate shell
-npm run storybook
 ```
 
 Open browser windows at the following URLs to see the respective apps:
 
-1. http://localhost:3000/: Movie Magic Ai
-2. http://localhost:6006/: Storybook
+1. http://localhost:3000/: Movie Magic ChatGPT 4o
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
