@@ -13,7 +13,8 @@
     "tailwindcss",
     "tsup",
     "turborepo",
-    "watchlist"
+    "watchlist",
+    "wireframe"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
