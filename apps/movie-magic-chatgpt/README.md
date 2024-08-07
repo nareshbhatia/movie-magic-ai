@@ -91,11 +91,8 @@ wireframe that I had supplied earlier. I gave it a screenshot of the Movie List
 from my manual implementation (see below) along with precise column widths, text
 justifications and the desired responsive behavior.
 
-<figure>
-    <img src="assets/movie-list-spec.png"
-         alt="Movie List Spec">
-    <figcaption>Visual design of Movie List supplied to ChatGPT</figcaption>
-</figure>
+![Movie List Spec](assets/movie-list-spec.png) _Visual design of Movie List
+supplied to ChatGPT_
 
 ChatGPT did a pretty good job with this. It used grid layout to create precise
 column widths. It also implemented the responsive specs, but messed up a little.
@@ -111,11 +108,8 @@ ChatGPT with a screenshot of the Toolbar from my manual implementation (see
 below) along with the specifications of the shadcn/ui components that I wanted
 to use.
 
-<figure>
-    <img src="assets/toolbar-spec.png"
-         alt="Toolbar Spec">
-    <figcaption>Visual design of Toolbar supplied to ChatGPT</figcaption>
-</figure>
+![Toolbar Spec](assets/toolbar-spec.png) _Visual design of Toolbar supplied to
+ChatGPT_
 
 ChatGPT did what I asked it to do, but it was obvious that it was following
 instructions without actually understanding them. For example, it thought that
