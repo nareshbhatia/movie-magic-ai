@@ -10,8 +10,9 @@ I started with a detailed conversation with ChatGPT, explaining the requirements
 for Movie Magic. This conversation lasted about two hours, involving
 explanations of the application's functionality, reviewing its understanding,
 and providing clarifications and feedback to get the requirements right. You can
-review the details in the ChatGPT Session Transcript, but here's a high-level
-summary:
+review the details in the
+[ChatGPT Session Transcript](assets/ChatGPT%20Session%20Transcript.pdf), but
+here's a high-level summary:
 
 1. **Prompt (along with the hand-sketched wireframe):**
    - "You are a front-end developer with 20 years of experience in building web
