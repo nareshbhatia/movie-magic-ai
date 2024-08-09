@@ -14,7 +14,7 @@ review the details in the
 [ChatGPT Session Transcript](assets/ChatGPT%20Session%20Transcript.pdf), but
 here's a high-level summary:
 
-1. **Prompt (along with the hand-sketched wireframe):**
+1. **Prompt (along with a hand-sketched wireframe):**
    - "You are a front-end developer with 20 years of experience in building web
      applications. Give me a detailed description of what's in this wireframe."
    - **Response:** ChatGPT provided a detailed understanding of the wireframe,
