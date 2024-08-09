@@ -1,12 +1,12 @@
 # Movie Magic v0
 
-These are my notes from implementing Movie Magic using ChatGPT 4o.
+These are my notes from implementing Movie Magic using Vercel's v0.
 
 ## Development Log
 
-### Create version 0 of the app in v0
+### Create version 0 in Vercel's v0 environment
 
-#### Prompt 0 + a hand-sketched wireframe
+#### Prompt 0 + hand-sketched wireframe
 
 "A movie streaming application called Movie Magic that allows the user to browse
 and filter movies so they can add them to their watchlist."
@@ -18,7 +18,7 @@ and shadcn/ui.
 
 ![v0](assets/v0.png)
 
-Here are the highlights:
+Here are some highlights:
 
 - The application logo was spot on (film icon)
 - The mode toggle and user icons were spot on, though non-functional
@@ -170,3 +170,9 @@ function FilmIcon(props) {
   ...
 }
 ```
+
+#### Iteration 2: Split the code into manageable components
+
+v0 generates all of the UI code in a single file called `component.jsx`. This is
+obviously not very manageable for for complex screens. So the first thing I did
+was to split this file into smaller logical pieces – no functional changes.
