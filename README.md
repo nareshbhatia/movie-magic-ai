@@ -1,18 +1,26 @@
 # Movie Magic AI
 
-Movie Magic implementations using various AI assistants. The goal is to build a
-movie streaming app that allows the user to browse and filter movies so they can
-add them to their watchlist.
+This repository implements Movie Magic using various AI assistants. For a
+completely manual implementation, please see the
+[original repository](https://github.com/code-shaper/movie-magic) and the
+[live demo](https://movie-magic-ultimate.vercel.app/).
 
-For every AI assistant, we'll start with a hand-sketched wireframe shown below
+Movie Magic is a contrived, but realistic movie streaming app that allows the
+user to browse and filter movies so they can add them to their watchlist. For
+every implementation, we provided a hand-sketched wireframe to the AI assistant
 to get it started.
 
 ![Movie Magic Wireframe](assets/movie-magic-wireframe.png)
 
-We'll shoot for the following visual design by providing additional prompts as
-necessary.
+We then iterated on the implementation, providing feedback and guidance to the
+AI assistant to shoot for the following visual design:
 
 ![Movie Magic Ultimate](assets/movie-magic-ultimate.png)
+
+Please follow the links below for detailed evaluations:
+
+1. [Movie Magic using ChatGPT 4o](apps/movie-magic-chatgpt/)
+2. [Movie Magic using Vercel v0](apps/movie-magic-v0/)
 
 ## Prerequisites for development
 
@@ -30,8 +38,8 @@ npm run dev    # run apps
 
 Open browser windows at the following URLs to see the respective apps:
 
-1. http://localhost:3000/: Movie Magic ChatGPT 4o
-1. http://localhost:3001/: Movie Magic Vercel v0
+1. http://localhost:3000/: Movie Magic using ChatGPT 4o
+1. http://localhost:3001/: Movie Magic using Vercel v0
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
