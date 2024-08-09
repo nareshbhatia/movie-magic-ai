@@ -2,7 +2,15 @@
 
 Movie Magic implementations using various AI assistants. The goal is to build a
 movie streaming app that allows the user to browse and filter movies so they can
-add them to their watchlist. Here's the design that we want to shoot for.
+add them to their watchlist.
+
+For every AI assistant, we'll start with a hand-sketched wireframe shown below
+to get it started.
+
+![Movie Magic Wireframe](assets/movie-magic-wireframe.png)
+
+We'll shoot for the following visual design by providing additional prompts as
+necessary.
 
 ![Movie Magic Ultimate](assets/movie-magic-ultimate.png)
 

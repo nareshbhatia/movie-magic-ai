@@ -11,7 +11,7 @@ These are my notes from implementing Movie Magic using Vercel's v0.
 "A movie streaming application called Movie Magic that allows the user to browse
 and filter movies so they can add them to their watchlist."
 
-![Movie Magic Wireframe](assets/movie-magic-wireframe.png)
+![Movie Magic Wireframe](../../assets/movie-magic-wireframe.png)
 
 v0 created a very good first implementation of the wireframe using Tailwind CSS
 and shadcn/ui.
@@ -184,7 +184,9 @@ was to split this file into smaller logical pieces – no functional changes.
 #### Iteration 4: UI cleanup
 
 Here's the final implementation after some UI cleanup, tightening up the look &
-feel.
+feel. See
+[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/f37434c8003837decaf3657fbc7949f05e7d2693)
+for the effort involved.
 
 ![Iteration 4](assets/iteration-4.png)
 
