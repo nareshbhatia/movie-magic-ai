@@ -7,7 +7,7 @@ import { ListFilter } from 'lucide-react';
 
 export function Toolbar() {
   return (
-    <div className="flex items-center justify-between">
+    <div className="sticky top-14 z-50 flex h-14 w-full items-center justify-between bg-background">
       <Sheet>
         <SheetTrigger asChild>
           <Button className="flex items-center space-x-2" variant="outline">
@@ -16,7 +16,7 @@ export function Toolbar() {
           </Button>
         </SheetTrigger>
         <SheetContent className="w-full" side="left">
-          Filter & Sort
+          <h1 className="flex-1 text-center text-lg">Filter & Sort</h1>
         </SheetContent>
       </Sheet>
       <Badge variant="secondary">250 Movies</Badge>

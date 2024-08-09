@@ -4,9 +4,9 @@ import { Toolbar } from './_components/Toolbar';
 
 export default function MoviesPage() {
   return (
-    <div className="flex min-h-screen flex-col p-4">
+    <div className="container relative mx-auto flex min-h-screen max-w-screen-lg flex-col px-4 sm:px-8">
       <Header />
-      <main className="mt-4 flex flex-1 flex-col gap-4">
+      <main className="flex-1">
         <Toolbar />
         <MovieList />
       </main>

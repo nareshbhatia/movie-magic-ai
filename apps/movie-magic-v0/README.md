@@ -180,3 +180,15 @@ was to split this file into smaller logical pieces – no functional changes.
 #### Iteration 3: Implement dark mode
 
 ![Iteration 3](assets/iteration-3.png)
+
+#### Iteration 4: UI cleanup
+
+Here's the final implementation after some UI cleanup, tightening up the look &
+feel.
+
+![Iteration 4](assets/iteration-4.png)
+
+This now matches my manual implementation exactly, wow! Very happy with v0 so
+far. Of course, this gets us only the visual look. The functionality is still
+missing, such as fetching data from a server and the filters not working. I
+stopped here with v0 because I had a good idea of its capabilities.
