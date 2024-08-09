@@ -176,3 +176,7 @@ function FilmIcon(props) {
 v0 generates all of the UI code in a single file called `component.jsx`. This is
 obviously not very manageable for for complex screens. So the first thing I did
 was to split this file into smaller logical pieces – no functional changes.
+
+#### Iteration 3: Implement dark mode
+
+![Iteration 3](assets/iteration-3.png)

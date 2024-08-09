@@ -15,7 +15,7 @@ export function Toolbar() {
             <ListFilter className="size-4" />
           </Button>
         </SheetTrigger>
-        <SheetContent className="w-[300px] p-4" side="left">
+        <SheetContent className="w-full" side="left">
           Filter & Sort
         </SheetContent>
       </Sheet>

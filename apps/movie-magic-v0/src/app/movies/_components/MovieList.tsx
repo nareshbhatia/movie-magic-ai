@@ -30,7 +30,7 @@ export function MovieList() {
               alt={movie.name}
               className="aspect-[2/3] w-full object-cover"
               height={movie.image.height}
-              src="/placeholder.svg"
+              src={movie.image.url}
               width={movie.image.width}
             />
           </div>

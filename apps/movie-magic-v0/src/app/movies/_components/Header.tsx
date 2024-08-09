@@ -1,6 +1,8 @@
 'use client';
 
+import { ModeToggle } from './ModeToggle';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -10,31 +12,25 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
-import { Film, Menu, Sun } from 'lucide-react';
+import { Film, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [_, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <header className="flex items-center justify-between border-b pb-4 dark:border-muted">
-      <Sheet>
+      <Sheet onOpenChange={setIsDrawerOpen} open={isDrawerOpen}>
         <SheetTrigger asChild>
-          <button
-            className={`rounded-full p-2 transition-colors sm:hidden ${
-              isDarkMode
-                ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                : 'bg-muted text-muted-foreground hover:bg-muted/90'
-            }`}
-            onClick={() => {
-              setIsDrawerOpen(true);
-            }}
+          <Button
+            className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 min-[500px]:hidden"
+            variant="ghost"
           >
             <Menu className="size-6" />
-          </button>
+            <span className="sr-only">Toggle Menu</span>
+          </Button>
         </SheetTrigger>
-        <SheetContent className="w-[300px] p-4" side="left">
+        <SheetContent className="w-full" side="left">
           <div className="flex items-center space-x-4">
             <Film className="size-6" />
             <h1 className="text-xl font-bold">Movie Magic</h1>
@@ -49,7 +45,7 @@ export function Header() {
           </nav>
         </SheetContent>
       </Sheet>
-      <div className="hidden items-center space-x-4 sm:flex">
+      <div className="hidden items-center space-x-4 min-[500px]:flex">
         <div className="flex items-center space-x-4">
           <Film className="size-6" />
           <h1 className="text-xl font-semibold">Movie Magic</h1>
@@ -64,44 +60,7 @@ export function Header() {
         </nav>
       </div>
       <div className="ml-auto flex items-center space-x-4">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <button
-              className={`rounded-full p-2 transition-colors ${
-                isDarkMode
-                  ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                  : 'bg-muted text-muted-foreground hover:bg-muted/90'
-              }`}
-            >
-              <div>
-                <Sun className="size-6" />
-              </div>
-            </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-40">
-            <DropdownMenuItem
-              onClick={() => {
-                setIsDarkMode(false);
-              }}
-            >
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => {
-                setIsDarkMode(true);
-              }}
-            >
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => {
-                setIsDarkMode(true);
-              }}
-            >
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Avatar>
