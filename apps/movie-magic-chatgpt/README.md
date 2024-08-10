@@ -1,6 +1,7 @@
 # Movie Magic using ChatGPT 4o
 
-These are my notes from implementing Movie Magic using ChatGPT 4o.
+These are my notes from implementing Movie Magic using
+[ChatGPT 4o](https://openai.com/chatgpt).
 
 ## Development Log
 

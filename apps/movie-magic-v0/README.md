@@ -1,6 +1,7 @@
 # Movie Magic using Vercel's v0
 
-These are my notes from implementing Movie Magic using Vercel's v0.
+These are my notes from implementing Movie Magic using
+[Vercel's v0](https://v0.dev).
 
 ## Development Log
 

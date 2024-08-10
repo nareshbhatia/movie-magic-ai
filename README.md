@@ -21,6 +21,7 @@ Please follow the links below for detailed evaluations:
 
 1. [Movie Magic using ChatGPT 4o](apps/movie-magic-chatgpt/)
 2. [Movie Magic using Vercel v0](apps/movie-magic-v0/)
+3. [Movie Magic using Devin](apps/movie-magic-devin/)
 
 ## Prerequisites for development
 
@@ -39,7 +40,8 @@ npm run dev    # run apps
 Open browser windows at the following URLs to see the respective apps:
 
 1. http://localhost:3000/: Movie Magic using ChatGPT 4o
-1. http://localhost:3001/: Movie Magic using Vercel v0
+2. http://localhost:3001/: Movie Magic using Vercel v0
+3. http://localhost:3002/: Movie Magic using Devin
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
