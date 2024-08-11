@@ -1,19 +1,28 @@
 # Movie Magic using Devin
 
 These are my notes from implementing Movie Magic using
-[Devin](https://www.cognition.ai/blog/introducing-devin).
+[Devin](https://www.cognition.ai/blog/introducing-devin), an AI-powered
+development assistant.
+
+## Table of Contents
+
+- [Development Log](#development-log)
+  - [Prompting Devin to Generate Movie Magic](#prompting-devin-to-generate-movie-magic)
+  - [Manually Iterating on Devin's Code](#manually-iterating-on-devins-code)
+- [Devin – Overall Impressions](#devin--overall-impressions)
+- [Conclusion](#conclusion)
 
 ## Development Log
 
 ### Prompting Devin to Generate Movie Magic
 
-If you haven't tried Devin yet, it takes a very different approach to code
-generation. It's more like an AI apprentice than an expert assistant. While it
-knows a few computer languages and technologies, it doesn't pretend to know them
-all. Devin's interface is tuned to a learning mindset where you provide
-documents and references to make it learn whatever it doesn't know. Once it
-learns how a technology works, you can prompt it to do your tasks. Here's a
-small excerpt from my session with Devin to give you a flavor:
+Devin takes a very different approach to code generation, functioning more like
+an AI apprentice than an expert assistant. It has knowledge of several computer
+languages and technologies but doesn't claim expertise in all areas. Devin's
+interface is tuned to a learning mindset, allowing you to provide documents and
+references to expand its knowledge base. Once it has learned how a technology
+works, you can prompt it to use it in your tasks. Here's a brief excerpt from my
+interaction with Devin to give you an idea:
 
 **Me:** "What web technologies are you trained on?"
 
@@ -36,43 +45,46 @@ familiar with it. If you could provide more context or documentation on
 shadcn/ui, I'd be happy to learn more about it and see how I can assist you with
 these technologies."
 
-This should give you a good idea of how to interact with Devin. In general, I
+This exchange illustrates how to interact with Devin effectively. Generally, I
 found that I had to give very detailed and explicit instructions to Devin;
 otherwise, it would easily go off course. In other words, you have to
-micromanage it. Here's a link to
-[my full session with Devin](https://preview.devin.ai/sessions/6240fabdbed7404d8a0ceb1be32514c1).
+micromanage it.
+
+You can view
+[my full session with Devin here](https://preview.devin.ai/sessions/6240fabdbed7404d8a0ceb1be32514c1).
 
 Another important differentiation is that Devin has a full-blown development
-environment, including:
+environment that includes:
 
-1. **Command Shell**: where Devin runs commands like `npm install` and
-   `npm run...`
-2. **Browser**: where Devin interacts with websites to read documentation and
-   run the application
-3. **Editor**: where Devin edits files
-4. **Planner**: where Devin breaks down tasks and executes them in order.
-
-See the screenshot below:
+1. **Command Shell**: For running commands like `npm install` and `npm run...`
+2. **Browser**: For interacting with websites to read documentation and run the
+   application
+3. **Editor**: For editing files
+4. **Planner**: For breaking down tasks and executing them in order
 
 ![Devin's Environment](assets/devins-environment.png)
 
-In addition, Devin provides the full VS Code editor where you can manually
-change the code that Devin has generated.
+Additionally, Devin provides a full VS Code editor for manual code
+modifications.
 
 #### Prompt 1: Setup Next.js + Tailwind CSS + shadcn/ui
 
 **Me:** "Let's start by creating a new Next.js project by running the following
-command:
+command:"
 
-`npx create-next-app@latest movie-magic-devin --typescript --tailwind --eslint`"
+```shell
+npx create-next-app@latest movie-magic-devin --typescript --tailwind --eslint
+```
 
 **Devin:** "Got it, Naresh. I'll go ahead and create the new Next.js project
 with the specified configurations."
 
 **Me:** "Okay, now run the following command in the project's root directory to
-set up shadcn/ui:
+set up shadcn/ui:"
 
-`npx shadcn-ui@latest init`"
+```shell
+npx shadcn-ui@latest init
+```
 
 **Devin:** "I'm on it, Naresh... The shadcn/ui setup has been completed."
 
@@ -118,8 +130,8 @@ repository.
 I tried to get Devin to commit code to my GitHub repository, but that did not
 work. I tried Devin's integration with GitHub as well as providing it with my
 personal access token – both methods failed. So, I decided to copy the code
-manually. Here's the
-[repository at this point](https://github.com/nareshbhatia/movie-magic-ai/tree/3c33d8961ba9ffcdf6f74e00b62ed0f65b4dfa9f),
+manually. You can view the
+[repository at this point here](https://github.com/nareshbhatia/movie-magic-ai/tree/3c33d8961ba9ffcdf6f74e00b62ed0f65b4dfa9f),
 and here's a snapshot of the running code:
 
 ![Iteration 1](assets/iteration-1.png)
@@ -147,36 +159,37 @@ and here's a snapshot of the running code:
 
 #### Iteration 2: Clean Up Code and Directory Structure
 
-See
-[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/2c48998303599a09801dcfaf9b547fa6a547da17)
-to get a feel for the changes.
+I made several changes to improve the code structure and functionality. You can
+see the
+[changes in this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/2c48998303599a09801dcfaf9b547fa6a547da17).
 
 ![Iteration 2](assets/iteration-2.png)
 
-**Key observations**:
+**Key improvements**:
 
 1. The toolbar is now visible because it has been moved into the `MoviesPage`.
 2. The movie list is showing the real data, including images.
-3. The styling of the Movie List is awful. It would have been somewhat
-   reasonable if Devin had followed the provided column width specifications.
-4. The page is now showing in dark mode. This is highlighting a few other
+3. The page is now showing in dark mode. This is highlighting a few other
    issues. Devin does not fully understand how to implement dark mode using
    Tailwind CSS and shadcn/ui. This is evident from the table header, whose
    background is hard-coded to `bg-gray-100`. That's why it has not changed to a
    dark color in dark mode, and the contained text is invisible.
-5. Devin did not use the `Sheet` and `Badge` components for the Toolbar as
+
+**Issues remaining**
+
+1. The styling of the Movie List is awful. It would have been somewhat
+   reasonable if Devin had followed the provided column width specifications.
+2. Devin did not use the `Sheet` and `Badge` components for the Toolbar as
    instructed.
+3. The overall look & feel needs to be tightened up.
 
 #### Iteration 3: UI Cleanup
 
-Here's the final implementation after a bunch of UI cleanup, tightening up the
-look & feel. See
-[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/6ae6b37d5633d075bab164f3bfb7953810692bf5).
+The final implementation involved significant UI cleanup to match my manual
+implementation exactly. You can view the
+[changes in this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/6ae6b37d5633d075bab164f3bfb7953810692bf5).
 
 ![Iteration 3](assets/iteration-3.png)
-
-This now matches my manual implementation exactly. However, it took a lot of
-effort to get to this point.
 
 ## Devin – Overall Impressions
 
@@ -191,30 +204,31 @@ it produces.
 
 ### The Good
 
-Devin offers a unique approach to AI-assisted software development, serving more
-as an apprentice than an expert. This allows developers to mold it to their
-specific needs, especially when working with less common technologies. The
-development environment is well-integrated, providing command execution, browser
-interaction, and a code editor all in one place, allowing you to iterate over
-the results.
+1. **Unique approach as an AI apprentice:** Devin serves more as an apprentice
+   than an expert. This allows developers to mold it to their specific needs,
+   especially when working with less common technologies.
+2. **Well-integrated development environment:** The development environment
+   provides command execution, browser interaction, and a code editor all in one
+   place, allowing you to iterate over the results.
 
 ### The Not So Good
 
-However, Devin requires a high level of micromanagement. Its tendency to stray
-off course when instructions are not crystal clear is a significant drawback.
-This constant need for explicit direction is not just a minor inconvenience but
-can be very frustrating, especially when trying to maintain a smooth workflow.
-Moreover, the code Devin produces is often not squeaky clean. It tends to follow
-less-than-ideal coding patterns, leaving behind unused code and mixing up
-details (e.g. App Router vs. Page Router). These issues can be particularly
-annoying for those who prefer a clean, well-organized codebase. In its current
-state, Devin does not feel ready for prime time.
+1. **Requires significant micromanagement:** Devin's tendency to stray off
+   course when instructions are not crystal clear is a significant drawback.
+   This constant need for explicit direction is not just a minor inconvenience
+   but can be very frustrating, especially when trying to maintain a smooth
+   workflow.
+2. **Produces code that often needs cleanup:** Devin tends to follow
+   less-than-ideal coding patterns (e.g function expressions as components), and
+   leaves behind unused code. These issues can be particularly annoying for
+   those who prefer a clean, well-organized codebase.
+3. **Mixes up technical details**: For example, not knowing the difference
+   between Next.js App Router vs. Page Router
 
 ## Conclusion
 
 Devin shows promise as an AI-assisted development tool, particularly in its
-ability to adapt to specific needs with guidance. However, its shortcomings in
-maintaining focus and producing clean code mean that it's not yet ready for
-serious production work without significant oversight. Developers looking for a
-reliable assistant may find Devin more of a learning partner than a polished
-tool at this stage.
+ability to adapt to specific needs with guidance. However, its current
+limitations in maintaining focus and producing clean code mean that it's not yet
+ready for serious production work without significant oversight. Developers may
+find Devin more of a learning partner than a polished tool at this stage.
