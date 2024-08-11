@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 
 function Toolbar() {
-  const [totalMovies, _] = useState(0); // This should be replaced with actual data
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const toggleFilter = () => {
@@ -30,7 +29,7 @@ function Toolbar() {
       </div>
 
       <span className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-        Total Movies: {totalMovies}
+        Total Movies: 250
       </span>
     </div>
   );

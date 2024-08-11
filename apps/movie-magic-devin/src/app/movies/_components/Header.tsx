@@ -1,18 +1,18 @@
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { Button } from './ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-} from './ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu';
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
-} from './ui/navigation-menu';
+} from '@/components/ui/navigation-menu';
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 import { Film } from 'lucide-react';
 import Link from 'next/link';
