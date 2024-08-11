@@ -1,3 +1,4 @@
+import { ModeToggle } from './ModeToggle';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -5,6 +6,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import {
@@ -13,19 +15,18 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu';
-import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 import { Film } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 function Header() {
   return (
-    <header className="border-b bg-background">
+    <header className="sticky top-0 z-50 flex h-14 w-full items-center justify-between bg-background">
       <div className="container mx-auto flex items-center justify-between p-4">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <Film className="size-6" />
-            <h1 className="text-xl font-bold">Movie Magic</h1>
+            <span className="font-semibold dark:font-bold">Movie Magic</span>
           </div>
           <NavigationMenu>
             <NavigationMenuList className="flex space-x-4">
@@ -43,25 +44,26 @@ function Header() {
           </NavigationMenu>
         </div>
 
-        <div className="flex items-center space-x-4">
-          <Button size="icon" variant="ghost">
-            <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <MoonIcon className="absolute size-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-
+        <div className="ml-auto flex items-center space-x-4">
+          <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Avatar>
-                <AvatarImage alt="User" src="/path-to-user-image.jpg" />
-                <AvatarFallback>U</AvatarFallback>
-              </Avatar>
+              <Button className="relative size-8 rounded-full" variant="ghost">
+                <Avatar className="size-8">
+                  <AvatarImage alt="User Avatar" src="/placeholder-user.jpg" />
+                  <AvatarFallback>JD</AvatarFallback>
+                </Avatar>
+              </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuContent align="end" className="w-60">
+              <DropdownMenuLabel>
+                <div className="font-semibold">John Doe</div>
+                <div className="text-sm text-muted-foreground">
+                  john@example.com
+                </div>
+              </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem>Sign Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

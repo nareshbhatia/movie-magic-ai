@@ -1,45 +1,60 @@
 import { movies } from '@/data/movies';
 
-function MovieList() {
+export function MovieList() {
   return (
-    <div className="flex flex-col">
-      {/* Table Header */}
-      <div className="flex bg-gray-100 p-4 font-bold sm:hidden">
-        <div className="w-1/4">Image</div>
-        <div className="w-3/4">Title</div>
-      </div>
-      <div className="hidden bg-gray-100 p-4 font-bold sm:flex">
-        <div className="w-1/6">Image</div>
-        <div className="w-1/4">Title</div>
-        <div className="w-1/6">Year</div>
-        <div className="w-1/6">Runtime</div>
-        <div className="w-1/6">Rating</div>
-      </div>
-
-      {/* Movie Rows */}
-      {movies.map((movie) => (
-        <div className="flex items-center border-b p-4" key={movie.id}>
-          <div className="w-1/4 sm:w-1/6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt={movie.name}
-              className="h-auto w-full"
-              src={movie.image.url}
-            />
+    <>
+      <header className="sticky top-14 z-50 hidden w-full border-b bg-background sm:top-28 sm:block">
+        <div className="flex items-center gap-x-3 px-2 py-3 text-sm leading-none text-muted-foreground">
+          <div className="mr-2 hidden w-8 shrink-0 text-right sm:block">#</div>
+          <div className="w-16 flex-1 shrink-0 ">Title</div>
+          <div className="hidden w-12 shrink-0 text-center sm:block">
+            Rating
           </div>
-          <div className="w-3/4 sm:w-1/4">
-            <h3 className="font-semibold">{movie.name}</h3>
-            <p className="text-sm text-gray-600">{movie.genres.join(', ')}</p>
-          </div>
-          <div className="hidden w-1/6 sm:block">{movie.releaseYear}</div>
-          <div className="hidden w-1/6 sm:block">{movie.runtime} min</div>
-          <div className="hidden w-1/6 sm:block">
-            {movie.ratingsSummary.aggregateRating}
+          <div className="hidden w-12 shrink-0 text-right sm:block">Year</div>
+          <div className="hidden w-12 shrink-0 text-right sm:block">
+            Runtime
           </div>
         </div>
-      ))}
-    </div>
+      </header>
+      <div className="relative w-full overflow-auto py-2">
+        {movies.map((movie) => (
+          <div
+            className="flex items-center gap-x-3 rounded-md p-2 text-sm text-muted-foreground hover:bg-muted/50"
+            key={movie.id}
+          >
+            <div className="mr-2 hidden w-8 shrink-0 text-right text-base sm:block">
+              {movie.rank}
+            </div>
+            <div className="relative flex h-24 w-16 shrink-0 overflow-hidden rounded-md">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt={movie.name}
+                className="aspect-[2/3] w-full object-cover"
+                height={movie.image.height}
+                src={movie.image.url}
+                width={movie.image.width}
+              />
+            </div>
+            <div className="mr-6 min-w-0 flex-1 overflow-hidden">
+              <p className="line-clamp-2 text-base leading-5 text-accent-foreground">
+                {movie.name}
+              </p>
+              <div className="flex items-center gap-x-1">
+                {movie.genres.join(', ')}
+              </div>
+            </div>
+            <div className="hidden w-12 shrink-0 text-center sm:block">
+              {movie.certificate}
+            </div>
+            <div className="hidden w-12 shrink-0 text-right sm:block">
+              {movie.releaseYear}
+            </div>
+            <div className="hidden w-12 shrink-0 text-right sm:block">
+              {movie.runtime}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
-
-export default MovieList;

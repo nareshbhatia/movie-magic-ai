@@ -1,14 +1,15 @@
 import Header from './_components/Header';
-import MovieList from './_components/MovieList';
-import Toolbar from './_components/Toolbar';
-import React from 'react';
+import { MovieList } from './_components/MovieList';
+import { Toolbar } from './_components/Toolbar';
 
 function MoviesPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container relative mx-auto flex min-h-screen max-w-screen-lg flex-col px-4 sm:px-8">
       <Header />
-      <Toolbar />
-      <MovieList />
+      <main className="flex-1">
+        <Toolbar />
+        <MovieList />
+      </main>
     </div>
   );
 }

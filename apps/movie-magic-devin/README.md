@@ -45,7 +45,9 @@ and here's a snapshot of the running code:
 
 #### Iteration 2: Clean up code and directory structure
 
-See [this commit]() to get a feel for the changes.
+See
+[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/2c48998303599a09801dcfaf9b547fa6a547da17)
+to get a feel for the changes.
 
 ![Iteration 2](assets/iteration-2.png)
 
@@ -62,3 +64,13 @@ See [this commit]() to get a feel for the changes.
    dark mode and the contained text is invisible.
 5. Devin did not use the `Sheet` and `Badge` components for the Toolbar as
    instructed.
+
+#### Iteration 3: UI cleanup
+
+Here's the final implementation after a bunch of UI cleanup, tightening up the
+look & feel. See [this commit]().
+
+![Iteration 3](assets/iteration-3.png)
+
+This now matches my manual implementation exactly. However it took a lot of
+effort to get to this point.

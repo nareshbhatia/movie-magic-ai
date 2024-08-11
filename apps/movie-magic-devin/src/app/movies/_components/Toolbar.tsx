@@ -1,38 +1,25 @@
 'use client';
 
-import React, { useState } from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
+import { ListFilter } from 'lucide-react';
 
-function Toolbar() {
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-  const toggleFilter = () => {
-    setIsFilterOpen(!isFilterOpen);
-  };
-
+export function Toolbar() {
   return (
-    <div className="flex items-center justify-between border-b bg-background p-4">
-      <div className="relative">
-        <button
-          className="rounded border px-4 py-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          onClick={toggleFilter}
-        >
-          Filter & Sort
-        </button>
-        {isFilterOpen ? (
-          <div className="absolute left-0 mt-2 w-64 rounded border bg-white p-4 shadow-lg">
-            <h2 className="mb-4 text-lg font-semibold">
-              Filter & Sort Options
-            </h2>
-            {/* Add your filter and sort UI elements here */}
-          </div>
-        ) : undefined}
-      </div>
-
-      <span className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-        Total Movies: 250
-      </span>
+    <div className="sticky top-14 z-50 flex h-14 w-full items-center justify-between bg-background">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button className="flex items-center space-x-2" variant="outline">
+            <span>Filter & Sort</span>
+            <ListFilter className="size-4" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent className="w-full" side="left">
+          <h1 className="flex-1 text-center text-lg">Filter & Sort</h1>
+        </SheetContent>
+      </Sheet>
+      <Badge variant="secondary">250 Movies</Badge>
     </div>
   );
 }
-
-export default Toolbar;
