@@ -1,7 +1,15 @@
 # Movie Magic using ChatGPT 4o
 
 These are my notes from implementing Movie Magic using
-[ChatGPT 4o](https://openai.com/chatgpt).
+[ChatGPT 4o](https://openai.com/chatgpt), an AI-powered development assistant.
+
+## Table of Contents
+
+- [Development Log](#development-log)
+  - [Prompting ChatGPT to Generate Movie Magic](#prompting-chatgpt-to-generate-movie-magic)
+  - [Manually Iterating on ChatGPT's Code](#manually-iterating-on-chatgpts-code)
+- [ChatGPT – Overall Impressions](#chatgpt--overall-impressions)
+- [Conclusion](#conclusion)
 
 ## Development Log
 

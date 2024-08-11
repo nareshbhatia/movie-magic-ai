@@ -1,7 +1,15 @@
 # Movie Magic using Vercel's v0
 
 These are my notes from implementing Movie Magic using
-[Vercel's v0](https://v0.dev).
+[Vercel's v0](https://v0.dev), an AI-powered development assistant.
+
+## Table of Contents
+
+- [Development Log](#development-log)
+  - [Prompting v0 to Generate Movie Magic](#prompting-v0-to-generate-movie-magic)
+  - [Manually Iterating on v0's Code](#manually-iterating-on-v0s-code)
+- [v0 – Overall Impressions](#v0--overall-impressions)
+- [Conclusion](#conclusion)
 
 ## Development Log
 
