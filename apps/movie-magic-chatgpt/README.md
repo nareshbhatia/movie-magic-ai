@@ -5,7 +5,7 @@ These are my notes from implementing Movie Magic using
 
 ## Development Log
 
-### Explain Requirements to ChatGPT
+### Prompting ChatGPT to Generate Movie Magic
 
 Here's a summary of prompts to ChatGPT. You can review the full detail in the
 [ChatGPT Session Transcript](assets/ChatGPT%20Session%20Transcript.pdf).
@@ -70,7 +70,7 @@ compilable! ChatGPT makes no attempt to compile the code it generates, resulting
 in minor issues all over the place. The developer must step in to create a
 working app. That's exactly what I did in iteration 1.
 
-### Iterate on ChatGPT generated code manually
+### Manually Iterating on ChatGPT's Code
 
 ### Iteration 1: Clean up generated code
 
