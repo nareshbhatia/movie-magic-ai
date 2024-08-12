@@ -18,8 +18,8 @@ const robotoMono = RobotoMono({
 });
 
 export const metadata: Metadata = {
-  title: 'Movie Magic v0',
-  description: 'Movie Magic v0',
+  title: 'Movie Magic Claude',
+  description: 'Movie Magic Claude',
 };
 
 interface RootLayoutProps {

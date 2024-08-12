@@ -1,6 +1,6 @@
 {
-  "name": "@movie-magic/movie-magic-v0",
-  "description": "Movie Magic v0",
+  "name": "@movie-magic/movie-magic-claude",
+  "description": "Movie Magic Claude",
   "private": true,
   "version": "0.0.1",
   "scripts": {
@@ -8,13 +8,13 @@
     "build-storybook": "storybook build --webpack-stats-json",
     "ci-validate": "run-s build-storybook",
     "clean": "rimraf .turbo node_modules build coverage .next next-env.d.ts out src/generated storybook-static",
-    "dev": "next dev --port 3002",
+    "dev": "next dev --port 3001",
     "format": "prettier --list-different '**/*.{js,jsx,ts,tsx,json,md}'",
     "format:fix": "npm run format -- --write",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "start": "next start",
-    "storybook": "storybook dev -p 6008",
+    "storybook": "storybook dev -p 6007",
     "test": "jest --coverage",
     "_build": "next build",
     "_codegen": "echo add any code generation steps here"
