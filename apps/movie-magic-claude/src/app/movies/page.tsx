@@ -5,10 +5,12 @@ import { movies } from '@/data/movies';
 
 export default function MoviesPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <div className="container relative mx-auto flex min-h-screen max-w-screen-lg flex-col px-4 sm:px-8">
       <Header />
-      <Toolbar movieCount={movies.length} />
-      <MovieList movies={movies} />
-    </main>
+      <main className="flex-1">
+        <Toolbar />
+        <MovieList movies={movies} />
+      </main>
+    </div>
   );
 }

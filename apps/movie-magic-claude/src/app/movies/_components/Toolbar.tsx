@@ -17,26 +17,22 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { SlidersHorizontal } from 'lucide-react';
+import { ListFilter } from 'lucide-react';
 import { useState } from 'react';
 
-interface ToolbarProps {
-  movieCount: number;
-}
-
-export function Toolbar({ movieCount }: ToolbarProps) {
+export function Toolbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex h-14 items-center justify-between border-b px-4">
+    <div className="sticky top-14 z-50 flex h-14 w-full items-center justify-between bg-background">
       <Sheet onOpenChange={setOpen} open={open}>
         <SheetTrigger asChild>
-          <Button variant="outline">
-            <SlidersHorizontal className="mr-2 size-4" />
-            Filter & Sort
+          <Button className="flex items-center space-x-2" variant="outline">
+            <span>Filter & Sort</span>
+            <ListFilter className="size-4" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="left">
+        <SheetContent className="w-full" side="left">
           <SheetHeader>
             <SheetTitle>Filter & Sort Movies</SheetTitle>
           </SheetHeader>
@@ -82,7 +78,7 @@ export function Toolbar({ movieCount }: ToolbarProps) {
           </div>
         </SheetContent>
       </Sheet>
-      <Badge variant="secondary">{movieCount} Movies</Badge>
+      <Badge variant="secondary">250 Movies</Badge>
     </div>
   );
 }
