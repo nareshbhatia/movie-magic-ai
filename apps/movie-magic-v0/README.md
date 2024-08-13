@@ -192,17 +192,22 @@ was to split this file into smaller logical pieces – no functional changes.
 
 #### Iteration 4: UI cleanup
 
-Here's the final implementation after some UI cleanup, tightening up the look &
-feel. See
-[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/f37434c8003837decaf3657fbc7949f05e7d2693)
-for the effort involved.
+With some UI cleanup and fine-tuning, I achieved a final implementation that
+matched my manual version exactly:
 
 ![Iteration 4](assets/iteration-4.png)
 
-This now matches my manual implementation exactly, wow! Very happy with v0 so
-far. Of course, this gets us only the visual look. The functionality is still
-missing, such as fetching data from a server and the filters not working. I
-stopped here with v0 because I had a good idea of its capabilities.
+See
+[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/f37434c8003837decaf3657fbc7949f05e7d2693)
+for the changes involved. Based on the complexity of the design, and the
+specificity of my prompts the changes are indeed very reasonable. This
+highlights the quality of v0's initial output.
+
+It's important to note, however, that this achievement primarily addresses the
+visual aspects of the application. The functional elements, such as data
+fetching from a server and implementing working filters, remain to be developed.
+I chose to stop here, as I had already understood v0's capabilities in frontend
+development.
 
 ## v0 – Overall Impressions
 

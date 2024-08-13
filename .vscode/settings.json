@@ -17,7 +17,8 @@
     "tsup",
     "turborepo",
     "watchlist",
-    "wireframe"
+    "wireframe",
+    "wireframes"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
