@@ -143,7 +143,7 @@ control over the layout.
 
 #### Prompt 13
 
-"Replace table with <div>s using flexbox. Make sure to replicate all column
+"Replace table with `<div>`s using flexbox. Make sure to replicate all column
 specs. All columns should have fixed widths, except for the Title colum which
 should expand to fill the remaining space."
 

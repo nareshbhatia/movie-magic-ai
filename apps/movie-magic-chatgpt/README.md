@@ -27,17 +27,16 @@ applications. Give me a detailed description of what's in this wireframe."
 
 ChatGPT provided a detailed understanding of the wireframe, breaking it down
 into three sections: (a) Header, (b) Main Content Area, (c) Movie List Table.
-The details were a bit sketchy, so I had to give it some help. This breakdown
-was not very accurate, so I gave it a helping hand.
+This breakdown was not very accurate, so I gave it a helping hand.
 
 #### Prompt 2
 
 "Breakdown the page into three sections: (a) Header, (b) Toolbar (containing the
-Filter & Sort button + the Total Movies badge), (c) Movie List." I then
-described each section in more detail.
+Filter & Sort button + the Total Movies badge), (c) Movie List."
 
-ChatGPT provided an updated description of the wireframe with my specified
-changes, but the specs were still not tight enough, so I gave it more hints.
+I then described each section in more detail. ChatGPT provided an updated
+description of the wireframe with my specified changes, but the specs were still
+not tight enough, so I gave it more hints.
 
 #### Prompt 3
 
@@ -53,14 +52,14 @@ ChatGPT updated the description with my specified changes.
 App Router, not the old Page Router), Tailwind CSS, shadcn/ui, Radix UI. Ask me
 any clarifying questions about this stack."
 
-ChatGPT asked six clarifying questions, such as "Next.js: Is there a preference
-for server-side rendering (SSR) or static site generation (SSG) for specific
-parts of the application?"
+ChatGPT asked six clarifying questions, e.g. "Is there a preference for
+server-side rendering (SSR) or static site generation (SSG) for specific parts
+of the application?"
 
 #### Prompt 5
 
-I answered all the questions in detail, e.g., "For Next.js, do not use SSR or
-SSG. Instead, use React Server Components (RSC) and React Client Components."
+Example answer: "Do not use SSR or SSG. Instead, use React Server Components
+(RSC) and React Client Components."
 
 This process went on until I was fully satisfied with the requirements. At that
 point, I asked ChatGPT to generate the code. It generated decent code, along
@@ -72,11 +71,11 @@ completely and used
 to generate my starter app.
 
 The generated code was reasonably modular, with the movies page at
-`/src/app/movies/page.tsx` and the three sections in three separate components
-under the `_components` folder. However, the code was not immediately
-compilable! ChatGPT makes no attempt to compile the code it generates, resulting
-in minor issues all over the place. The developer must step in to create a
-working app. That's exactly what I did in iteration 1.
+`/src/app/movies/page.tsx` and the three sections in three separate components.
+However, the code was not immediately compilable! ChatGPT makes no attempt to
+compile the code it generates, resulting in minor issues all over the place. The
+developer must step in to create a working app. That's exactly what I did in
+iteration 1.
 
 ### Manually Iterating on ChatGPT's Code
 
@@ -85,8 +84,8 @@ working app. That's exactly what I did in iteration 1.
 After ironing out all the compilation issues, the visual design was still off.
 Despite specific instructions, ChatGPT did not use any shadcn/ui components to
 give the UI a polished look. Light/dark mode was not implemented, and movie
-entries didn't include the provided images. I had to provide the exact code to
-render the image in a 2/3 aspect ratio.
+entries didn't include the provided images. Placeholder images were square, I
+had to adjust the code to render images in 2/3 aspect ratio.
 
 ![Iteration 1](assets/iteration-1.png)
 
@@ -136,10 +135,11 @@ make it work.
 
 ![Iteration 4](assets/iteration-4.png)
 
-This is very close to my manual implementation. Of course, it gets us only the
-visual look. The functionality is still missing, such as fetching data from a
-server and the filters not working. I stopped here with ChatGPT because I had a
-good idea of its capabilities.
+This is very close to my manual implementation. It's important to note, however,
+that this achievement primarily addressed the visual aspects of the application.
+The functional elements, such as data fetching from a server and implementing
+working filters, remain to be developed. I chose to stop here, as I had already
+understood ChatGPt's capabilities in front-end development.
 
 ## ChatGPT – Overall Impressions
 
@@ -191,8 +191,8 @@ good idea of its capabilities.
    application pages under the `/pages` directory instead of the `/app`
    directory, indicating a lack of understanding of the App Router.
 
-8. **Incorrect Import Paths:** Initially, ChatGPT generated long relative import
-   paths. I had to instruct it to use absolute imports for simplicity.
+8. **Long Import Paths:** ChatGPT generated long relative import paths. I had to
+   instruct it to use absolute imports for simplicity.
 
 9. **Component Structure:** ChatGPT initially generated all components as arrow
    functions. After receiving feedback, it converted them to function

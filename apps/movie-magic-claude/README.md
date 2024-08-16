@@ -114,9 +114,11 @@ matched my manual version exactly:
 
 ![Iteration 2](assets/iteration-2.png)
 
-See [this commit]() for the changes involved. Based on the complexity of the
-design, and the specificity of my prompts the changes are indeed very
-reasonable. This highlights the quality of Claude's initial output.
+See
+[this commit](https://github.com/nareshbhatia/movie-magic-ai/commit/1fff280d4067553775a1a759f51120bf3a08ca24)
+for the changes involved. Based on the complexity of the design, and the
+specificity of my prompts the changes are indeed very reasonable. This
+highlights the quality of Claude's initial output.
 
 It's important to note, however, that this achievement primarily addresses the
 visual aspects of the application. The functional elements, such as data
