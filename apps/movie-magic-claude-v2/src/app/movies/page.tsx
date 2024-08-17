@@ -1,8 +1,14 @@
+import { Header } from './_components/Header';
+import { MovieList } from './_components/MovieList';
+import { Toolbar } from './_components/Toolbar';
+import { movies } from '@/data/movies';
+
 export default function MoviesPage() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
-      <h1 className="text-2xl font-bold">Movies</h1>
-      <p>This feature is coming soon!</p>
-    </div>
+    <main className="flex min-h-screen flex-col">
+      <Header />
+      <Toolbar />
+      <MovieList movies={movies} />
+    </main>
   );
 }

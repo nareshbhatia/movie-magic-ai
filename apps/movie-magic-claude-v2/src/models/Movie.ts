@@ -15,7 +15,7 @@ export interface Movie {
   description: string;
   genres: string[];
   id: string;
-  image?: Image;
+  image: Image;
   isFeatured: boolean;
   name: string;
   rank: number;
