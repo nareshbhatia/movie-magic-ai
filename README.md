@@ -42,8 +42,10 @@ Open browser windows at the following URLs to see the respective apps:
 
 1. http://localhost:3000/: Movie Magic using ChatGPT 4o
 2. http://localhost:3001/: Movie Magic using Claude
-3. http://localhost:3002/: Movie Magic using Vercel v0
-4. http://localhost:3003/: Movie Magic using Devin
+3. http://localhost:3002/: Movie Magic using Claude (v2 - input is hi-def visual
+   design)
+4. http://localhost:3003/: Movie Magic using Vercel v0
+5. http://localhost:3004/: Movie Magic using Devin
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
