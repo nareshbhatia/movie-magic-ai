@@ -1,6 +1,6 @@
 {
   "name": "@movie-magic/movie-magic-claude-v2",
-  "description": "Movie Magic Claude (v2)",
+  "description": "Movie Magic Claude - v2",
   "private": true,
   "version": "0.0.1",
   "scripts": {

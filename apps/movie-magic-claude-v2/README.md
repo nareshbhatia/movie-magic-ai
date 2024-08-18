@@ -1,7 +1,7 @@
-# Movie Magic using Claude (v2)
+# Movie Magic using Claude - v2
 
 This is a variation on implementing Movie Magic using
-[Claude](https://www.anthropic.com/claude). As we’ll know, LLMs perform better
+[Claude](https://www.anthropic.com/claude). As we all know, LLMs perform better
 with improved prompting. I decided to see how Claude would do with high-fidelity
 visual designs as prompts vs. wireframes. I supplied two visual designs – one
 for mobile form factor and another for desktop form factor. Here’s the resulting

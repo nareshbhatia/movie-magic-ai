@@ -21,8 +21,10 @@ Please follow the links below for detailed evaluations:
 
 1. [Movie Magic using ChatGPT 4o](apps/movie-magic-chatgpt/)
 2. [Movie Magic using Claude](apps/movie-magic-claude/)
-3. [Movie Magic using Vercel v0](apps/movie-magic-v0/)
-4. [Movie Magic using Devin](apps/movie-magic-devin/)
+3. [Movie Magic using Claude - v2](apps/movie-magic-claude-v2/) (input is hi-def
+   visual design)
+4. [Movie Magic using Vercel v0](apps/movie-magic-v0/)
+5. [Movie Magic using Devin](apps/movie-magic-devin/)
 
 ## Prerequisites for development
 
@@ -42,7 +44,7 @@ Open browser windows at the following URLs to see the respective apps:
 
 1. http://localhost:3000/: Movie Magic using ChatGPT 4o
 2. http://localhost:3001/: Movie Magic using Claude
-3. http://localhost:3002/: Movie Magic using Claude (v2 - input is hi-def visual
+3. http://localhost:3002/: Movie Magic using Claude - v2 (input is hi-def visual
    design)
 4. http://localhost:3003/: Movie Magic using Vercel v0
 5. http://localhost:3004/: Movie Magic using Devin
