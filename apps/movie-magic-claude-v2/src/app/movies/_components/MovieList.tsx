@@ -12,16 +12,16 @@ function MobileMovieList({ movies }: MovieListProps) {
   return (
     <div className="space-y-4 p-4">
       {movies.map((movie) => (
-        <div className="flex space-x-4" key={movie.id}>
+        <div className="flex h-28 items-center" key={movie.id}>
           <Image
             alt={movie.name}
-            className="rounded"
-            height={150}
+            className="mr-4 rounded"
+            height={96}
             src={movie.image.url}
-            width={100}
+            width={64}
           />
           <div>
-            <h2 className="text-lg font-bold">{movie.name}</h2>
+            <h2 className="text-lg font-bold text-white">{movie.name}</h2>
             <p className="text-sm text-gray-400">{movie.genres.join(' • ')}</p>
           </div>
         </div>
@@ -44,28 +44,28 @@ function DesktopMovieList({ movies }: MovieListProps) {
       </thead>
       <tbody>
         {movies.map((movie) => (
-          <tr className="border-b border-gray-700" key={movie.id}>
-            <td className="p-4">{movie.rank}</td>
-            <td className="p-4">
-              <div className="flex items-center space-x-4">
+          <tr className="h-28 border-b border-gray-700" key={movie.id}>
+            <td className="p-4 align-middle">{movie.rank}</td>
+            <td className="p-4 align-middle">
+              <div className="flex items-center">
                 <Image
                   alt={movie.name}
-                  className="rounded"
+                  className="mr-4 rounded"
                   height={96}
                   src={movie.image.url}
                   width={64}
                 />
                 <div>
-                  <h2 className="font-bold">{movie.name}</h2>
+                  <h2 className="font-bold text-white">{movie.name}</h2>
                   <p className="text-sm text-gray-400">
                     {movie.genres.join(' • ')}
                   </p>
                 </div>
               </div>
             </td>
-            <td className="p-4 text-right">{movie.certificate}</td>
-            <td className="p-4 text-right">{movie.releaseYear}</td>
-            <td className="p-4 text-right">{movie.runtime}</td>
+            <td className="p-4 text-right align-middle">{movie.certificate}</td>
+            <td className="p-4 text-right align-middle">{movie.releaseYear}</td>
+            <td className="p-4 text-right align-middle">{movie.runtime}</td>
           </tr>
         ))}
       </tbody>
@@ -74,7 +74,7 @@ function DesktopMovieList({ movies }: MovieListProps) {
 }
 
 export function MovieList({ movies }: MovieListProps) {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 639px)' });
 
   return (
     <div className="bg-black text-white">

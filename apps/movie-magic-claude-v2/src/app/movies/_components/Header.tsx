@@ -32,7 +32,7 @@ function UserMenu() {
 }
 
 export function Header() {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 639px)' });
 
   return (
     <header className="flex h-14 items-center justify-between bg-black px-4 text-white">
