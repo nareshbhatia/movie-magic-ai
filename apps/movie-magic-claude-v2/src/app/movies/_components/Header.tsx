@@ -9,8 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { mainNavItems } from '@/config/main-nav';
+import { cn } from '@/lib/utils';
 import { Film, Menu } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive';
 
 function UserMenu() {
@@ -32,6 +35,7 @@ function UserMenu() {
 }
 
 export function Header() {
+  const pathname = usePathname();
   const isMobile = useMediaQuery({ query: '(max-width: 639px)' });
 
   return (
@@ -51,23 +55,21 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <Film className="size-6" />
             <h1 className="text-lg font-semibold">Movie Magic</h1>
-            <nav>
-              <ul className="flex space-x-4">
-                <li>
-                  <Link href="/movies" legacyBehavior passHref>
-                    <Button as="a" variant="ghost">
-                      Movies
-                    </Button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/watchlist" legacyBehavior passHref>
-                    <Button as="a" variant="ghost">
-                      Watchlist
-                    </Button>
-                  </Link>
-                </li>
-              </ul>
+            <nav className="flex items-center gap-4 text-sm lg:gap-6">
+              {mainNavItems.map((item) => (
+                <Link
+                  className={cn(
+                    'transition-colors hover:text-foreground/80',
+                    pathname.startsWith(item.href)
+                      ? 'text-foreground'
+                      : 'text-foreground/60',
+                  )}
+                  href={item.href}
+                  key={item.href}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </nav>
           </div>
           <div className="flex items-center space-x-4">
