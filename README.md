@@ -25,6 +25,7 @@ Please follow the links below for detailed evaluations:
    visual design)
 4. [Movie Magic using Vercel v0](apps/movie-magic-v0/)
 5. [Movie Magic using Devin](apps/movie-magic-devin/)
+6. [Movie Magic using Cursor](apps/movie-magic-cursor/)
 
 ## Prerequisites for development
 
@@ -48,6 +49,7 @@ Open browser windows at the following URLs to see the respective apps:
    design)
 4. http://localhost:3003/: Movie Magic using Vercel v0
 5. http://localhost:3004/: Movie Magic using Devin
+6. http://localhost:3005/: Movie Magic using Cursor
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
