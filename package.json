@@ -1,6 +1,6 @@
 {
   "name": "movie-magic-ai",
-  "description": "Movie Magic implementations using various AI assistants",
+  "description": "Evaluating hand-crafted vs. AI-assisted front-ends",
   "version": "0.0.1",
   "private": true,
   "repository": {

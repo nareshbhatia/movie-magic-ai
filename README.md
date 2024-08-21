@@ -1,14 +1,16 @@
 # Movie Magic AI
 
-This repository implements Movie Magic using various AI assistants. For a
-completely manual implementation, please see the
+**An evaluation of hand-crafted vs. AI-assisted front-ends**
+
+This repository implements Movie Magic, a realistic movie streaming app, using
+various AI assistants. For a completely manual implementation, please see the
 [original repository](https://github.com/code-shaper/movie-magic) and the
 [live demo](https://movie-magic-ultimate.vercel.app/).
 
-Movie Magic is a contrived, but realistic movie streaming app that allows the
-user to browse and filter movies so they can add them to their watchlist. For
-every implementation, we provided a hand-sketched wireframe to the AI assistant
-to get it started.
+Movie Magic is a contrived movie streaming app that allows the user to browse
+and filter movies so they can add them to their watchlist. For every
+implementation, we provided a hand-sketched wireframe to the AI assistant to get
+it started.
 
 ![Movie Magic Wireframe](assets/movie-magic-wireframe.png)
 
